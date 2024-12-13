@@ -1,0 +1,107 @@
+/* Conteneur principal */
+.movie-container {
+  padding: 20px;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Titre principal */
+.movie-header {
+  font-size: 1.8rem; /* Réduit la taille du titre principal */
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Grille de films */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Ajuste les colonnes */
+  gap: 15px;
+  justify-items: center; /* Centre les éléments */
+  margin-top: 20px;
+  width:100%
+}
+
+/* Carte de film */
+.movie-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* S'assure que les cartes occupent toute la largeur disponible */
+  max-width: 220px; /* Limite la largeur */
+}
+
+/* Effet au survol de la carte */
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Conteneur de l'image */
+.movie-image-container {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Ajuste la hauteur des images */
+}
+
+/* Image de film */
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garde l'image proportionnée sans déformation */
+  border-bottom: 3px solid #ffcc00;
+}
+
+/* Badge HD */
+.movie-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #00cc66;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* Détails du film */
+.movie-details {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titre du film */
+.movie-title {
+  font-size: 0.6rem; /* Réduit la taille du titre */
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+/* Métadonnées du film (année, genre, durée) */
+.movie-meta {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.8rem; /* Réduit la taille des métadonnées */
+  color: #aaa;
+}
+
+.movie-meta span {
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}

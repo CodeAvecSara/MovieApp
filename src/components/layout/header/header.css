@@ -1,0 +1,86 @@
+/* Reset */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d00;
+  }
+  
+  .nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .nav a:hover {
+    color: #d00;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  
+  .language-selector {
+    margin-right: 15px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .sign-in {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .subscribe {
+    background-color: #d00;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  

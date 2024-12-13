@@ -1,0 +1,6 @@
+.app-container {
+  background-color: #0E161D; /* Couleur de fond */
+  min-height: 100vh; /* Couvre toute la hauteur de la page */
+  margin: 0;
+  padding: 0;
+}
