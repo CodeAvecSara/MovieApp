@@ -84,8 +84,8 @@
 }
 
 /* Titre du film */
-.movie-title {
-  font-size: 0.6rem; /* Réduit la taille du titre */
+.movie-title1 {
+  font-size: 1.4rem; /* Réduit la taille du titre */
   color: #ffcc00;
   margin-bottom: 10px;
 }

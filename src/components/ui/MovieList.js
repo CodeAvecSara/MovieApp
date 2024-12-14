@@ -45,7 +45,7 @@ const MovieList = () => {
                 <span className="movie-badge">HD</span>
               </div>
               <div className="movie-details">
-                <h3 className="movie-title">{movie.title}</h3>
+                <h3 className="movie-title1" >{movie.title}</h3>
                 <div className="movie-meta">
                   <span className="movie-year">{new Date(movie.release_date).getFullYear()}</span>
                   <span className="movie-type">Movie</span>

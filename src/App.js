@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import MovieDetail from './components/ui/MovieDetail';
 import Header from './components/layout/header/header';
-
+import Footer from "./components/layout/footer/footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
@@ -18,6 +18,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
 
       </Routes>
+      <Footer/>
     </Router>
   );
 };
