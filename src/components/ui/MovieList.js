@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // Assurez-vous d'importer Link
 import axios from "axios";
 import "./MovieList.css"; // Assurez-vous que le fichier CSS est bien lié
 
@@ -29,26 +30,27 @@ const MovieList = ({ fetchUrl, title }) => {
       <h1 className="movie-header">{title}</h1>
       <div className="movie-grid">
         {items.map((item) => (
-          <div key={item.id} className="movie-card">
-            <div className="movie-image-container">
-              <img
-                src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-                alt={item.title || item.name}
-                className="movie-poster"
-              />
-              {/* Badge HD (facultatif, à afficher selon la condition de votre choix) */}
-              {item.vote_average > 7 && <div className="movie-badge">HD</div>}
-            </div>
-            <div className="movie-details">
-              <h3 className="movie-title1">{item.title || item.name}</h3>
-              <div className="movie-meta">
-                {item.release_date && (
-                  <span>{item.release_date.split("-")[0]}</span>
-                )}
-                <span>Rating: {item.vote_average}</span>
+          <Link key={item.id} to={`/movie/${item.id}`} className="movie-card-link">
+            <div className="movie-card">
+              <div className="movie-image-container">
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                  alt={item.title || item.name}
+                  className="movie-poster"
+                />
+                {item.vote_average > 7 && <div className="movie-badge">HD</div>}
+              </div>
+              <div className="movie-details">
+                <h3 className="movie-title1">{item.title || item.name}</h3>
+                <div className="movie-meta">
+                  {item.release_date && (
+                    <span>{item.release_date.split("-")[0]}</span>
+                  )}
+                  <span>Rating: {item.vote_average}</span>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

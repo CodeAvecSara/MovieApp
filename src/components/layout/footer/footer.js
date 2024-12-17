@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../../images/logo.png";
+import "./footer.css";
 
 import {
   faXTwitter,
