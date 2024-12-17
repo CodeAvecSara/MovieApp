@@ -1,4 +1,5 @@
 {
+  "homepage": "https://codeavecsara.github.io/MovieApp/",
   "name": "appfilm",
   "version": "0.1.0",
   "private": true,
@@ -23,7 +24,7 @@
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "deploy" : "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
