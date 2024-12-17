@@ -7,6 +7,8 @@ import Footer from "./components/layout/footer/footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import SignUp from './pages/SignUp'; // Assurez-vous que le chemin est correct
+import Movies from "./pages/Movies";
+import Series from "./pages/Series";
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<MovieDetail />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/series" element={<Series />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<SignUp />} />

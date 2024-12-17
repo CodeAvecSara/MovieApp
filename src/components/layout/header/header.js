@@ -27,11 +27,10 @@ const Header = () => {
       {/* Navigation */}
       <nav className={`nav ${menuOpen ? "mobile-visible" : ""}`}>
         <Link to="/">Home</Link>
-        <Link to="/movie">Movie</Link>
+        <Link to="/movies">Movies</Link>
         <Link to="/series">Series</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/search">Search</Link> {/* Ajouter Search dans le menu mobile */}
       </nav>
 
       {/* Header Actions (Hidden in mobile) */}
