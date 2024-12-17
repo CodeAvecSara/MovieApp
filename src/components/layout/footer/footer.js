@@ -117,17 +117,16 @@ const styles = {
     listStyle: "none",
     padding: 0,
     margin: "0",
+    display: "flex", // Utiliser flexbox pour aligner horizontalement
+    justifyContent: "center", // Centrer les éléments horizontalement
+    gap: "15px", // Espacement entre les liens
   },
   link: {
     textDecoration: "none",
     color: "black", // Liens en noir
     fontSize: "14px",
-    display: "block",
-    margin: "8px 0",
+    display: "inline-block", // Assurez-vous qu'il s'affiche en ligne
     transition: "color 0.3s",
-  },
-  linkHover: {
-    color: "red", // Survol en rouge
   },
   socialIcons: {
     marginTop: "15px",
@@ -139,10 +138,6 @@ const styles = {
     color: "black", // Icônes en noir
     fontSize: "20px",
     transition: "color 0.3s, transform 0.3s",
-  },
-  iconHover: {
-    color: "red", // Icônes en rouge au survol
-    transform: "scale(1.1)", // Effet zoom léger
   },
   subscribeText: {
     fontSize: "14px",

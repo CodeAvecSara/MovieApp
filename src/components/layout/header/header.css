@@ -1,86 +1,140 @@
-/* Reset */
-body, h1, h2, h3, p, a {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Header général */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 40px; /* Réduire la taille du logo */
+}
+
+/* Navigation pour desktop */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  color: #d00;
+}
+
+/* Menu Burger */
+.nav-toggle {
+  display: none; /* Caché par défaut */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navigation pour mobile */
+.nav.mobile-visible {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.nav.mobile-visible a {
+  margin: 10px 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Cacher les liens sur mobile par défaut */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Masqué par défaut */
   }
-  
-  /* Header styles */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
+
+  /* Afficher le menu burger */
+  .nav-toggle {
+    display: flex; /* Visible sur mobile */
   }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-img {
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .logo-text {
-    font-size: 20px;
-    font-weight: bold;
-    color: #d00;
-  }
-  
-  .nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-  }
-  
-  .nav a:hover {
-    color: #d00;
-  }
-  
+
+  /* Cacher les actions */
   .header-actions {
-    display: flex;
-    align-items: center;
+    display: none;
   }
-  
-  .search-bar {
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-right: 15px;
-  }
-  
-  .language-selector {
-    margin-right: 15px;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .btn {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .sign-in {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .subscribe {
-    background-color: #d00;
-    color: white;
-    margin-left: 10px;
-  }
-  
-  .btn:hover {
-    opacity: 0.8;
-  }
-  
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.language-selector {
+  margin-right: 15px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sign-in {
+  background-color: #007bff;
+  color: white;
+  margin-right: 20px;
+}
+
+.subscribe {
+  background: linear-gradient(to right, #fe0000, #007aff);
+  color: white;
+  margin-right: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.subscribe:hover {
+  opacity: 0.8;
+}

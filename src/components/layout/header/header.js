@@ -1,9 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Importer Link de react-router-dom
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
 import logo from "../../../images/logo.png";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header">
       {/* Logo */}
@@ -11,16 +17,24 @@ const Header = () => {
         <img src={logo} alt="FilmCity Logo" className="logo-image" />
       </div>
 
+      {/* Menu Burger (Mobile only) */}
+      <div className="nav-toggle" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       {/* Navigation */}
-      <nav className="nav">
-        <Link to="/">Home</Link> {/* Redirige vers la page d'accueil */}
-        <Link to="/movie">Movie</Link> {/* Redirige vers la page des films */}
-        <Link to="/series">Series</Link> {/* Redirige vers la page des séries */}
-        <Link to="/about">About</Link> {/* Redirige vers la page À propos */}
-        <Link to="/contact">Contact</Link> {/* Redirige vers la page Contact */}
+      <nav className={`nav ${menuOpen ? "mobile-visible" : ""}`}>
+        <Link to="/">Home</Link>
+        <Link to="/movie">Movie</Link>
+        <Link to="/series">Series</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/search">Search</Link> {/* Ajouter Search dans le menu mobile */}
       </nav>
 
-      {/* Header Actions */}
+      {/* Header Actions (Hidden in mobile) */}
       <div className="header-actions">
         <input type="text" className="search-bar" placeholder="Search" />
         <select className="language-selector">
@@ -29,7 +43,12 @@ const Header = () => {
           <option value="es">Spanish (Es)</option>
         </select>
         <button className="btn sign-in">Sign in</button>
-        <button className="btn subscribe">Subscribe</button>
+        <button
+          className="btn subscribe"
+          onClick={() => (window.location.href = "/SignUp")}
+        >
+          Subscribe
+        </button>
       </div>
     </header>
   );

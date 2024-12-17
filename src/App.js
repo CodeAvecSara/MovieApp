@@ -6,6 +6,7 @@ import Header from './components/layout/header/header';
 import Footer from "./components/layout/footer/footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import SignUp from './pages/SignUp'; // Assurez-vous que le chemin est correct
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/movie/:id" element={<MovieDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/signup" element={<SignUp />} />
 
       </Routes>
       <Footer/>

@@ -1,0 +1,140 @@
+/* General styles for the SignUp page */
+main {
+    padding-top: 60px; /* Compense la hauteur du Header */
+}
+
+.signup-main {
+    padding: 50px;
+    background-color: #0E161D;
+    color: #fff;
+}
+
+.signup-header {
+    text-align: center;
+    margin: 70px 0;
+}
+
+.signup-packages {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Adds horizontal spacing between cards */
+    flex-wrap: wrap;
+}
+
+.package-card {
+    border-radius: 5px;
+    background-color: #1B3043;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    padding: 30px;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour un effet fluide */
+}
+
+.package-card:hover {
+    transform: scale(1.1); /* Augmente la taille de la carte à 110% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Augmente l'ombre pour accentuer l'effet */
+}
+
+
+.package-card h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left; /* Aligns the title to the left */
+}
+
+.package-price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    text-align: left; /* Aligns the price to the left */
+}
+
+.package-details {
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: left; /* Aligns the description to the left */
+}
+
+.discover-more {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: justify; /* Aligns the Discover More text to be justified */
+    color: #007AFF;
+    cursor: pointer;
+}
+
+.subscribe-button {
+    background: linear-gradient(to right, #FE0000, #007AFF);
+    color: #fff;
+    padding: 5px 10px; /* Reduce vertical padding (top and bottom) */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px; /* Optional: Decrease font size */
+}
+
+
+.signup-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-footer h1 {
+    background: linear-gradient(to right, #FE0000, #007AFF); /* Dégradé de gauche à droite */
+    -webkit-background-clip: text; /* Applique le dégradé au texte */
+    -webkit-text-fill-color: transparent; /* Remplit uniquement le texte avec le dégradé */
+    display: inline-block; /* Assure que le texte ne s'étend pas au-delà de son contenu */
+    text-align: left; /* Gère correctement l'alignement si nécessaire */
+}
+
+.view-more-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.comparison-table {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: #fff;
+    background-color: #1B3043;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #2E3C4B;
+}
+
+th {
+    background-color: #2B3945;
+    color: #feffff;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #1E2A34;
+}
+
+td:first-child {
+    text-align: left;
+}
+.package-description {
+    font-size: 14px;
+    color: #d0d0d0;
+    margin: 10px 0;
+    text-align: justify;
+}
