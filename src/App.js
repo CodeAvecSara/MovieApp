@@ -9,6 +9,8 @@ import Contact from "./pages/Contact";
 import SignUp from './pages/SignUp'; // Assurez-vous que le chemin est correct
 import Movies from "./pages/Movies";
 import Series from "./pages/Series";
+import Subscribe from "./pages/Subscribe"
+import SignIn from "./pages/SignIn";
 
 const App = () => {
   return (
@@ -21,7 +23,9 @@ const App = () => {
         <Route path="/series" element={<Series />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/subscribe" element={<Subscribe />} />
 
       </Routes>
       <Footer/>

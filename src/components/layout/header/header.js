@@ -41,7 +41,12 @@ const Header = () => {
           <option value="fr">French (Fr)</option>
           <option value="es">Spanish (Es)</option>
         </select>
-        <button className="btn sign-in">Sign in</button>
+        <button 
+        className="btn sign-in"
+        onClick={() => (window.location.href = "/SignIn")}
+        >
+          Sign in</button>
+        
         <button
           className="btn subscribe"
           onClick={() => (window.location.href = "/SignUp")}
