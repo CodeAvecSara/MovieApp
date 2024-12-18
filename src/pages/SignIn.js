@@ -20,7 +20,7 @@ const SignIn = () => {
                 <button type="submit" className="signin-btn">Sign In</button>
             </form>
             <p className="signup-link">
-                Don't have an account? <a href="/subscribe">Subscribe now</a>
+                Don't have an account? <a href="/signup">Subscribe now</a>
             </p>
         </div>
         </main>

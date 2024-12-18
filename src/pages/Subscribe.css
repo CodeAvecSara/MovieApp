@@ -1,65 +1,105 @@
-.body{
-    background-color: #0E161D; /* Couleur de fond */
-
+/* Corps principal */
+.body {
+    background-color: #0E161D; /* Fond sombre */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10;
+    padding-bottom: 10px;
 }
+
 /* Conteneur principal */
 .subscribe-form-container {
     background-color: white; /* Fond blanc */
     padding: 30px;
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 450px;
+    margin: 60px auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Titre du formulaire */
 .form-title {
-    color: red;
+    color: #e50914; /* Rouge Netflix-like */
     font-size: 2rem;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-/* Groupes du formulaire */
+/* Groupes de champs */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
 
 .form-group label {
     font-size: 1rem;
+    font-weight: bold;
     margin-bottom: 5px;
     color: #333;
 }
 
-.form-group input {
-    padding: 10px;
+.form-group input,
+.payment-method-select {
+    padding: 12px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.form-group input:focus {
-    border-color: red;
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+/* Focus pour les champs */
+.form-group input:focus,
+.payment-method-select:focus {
+    border-color: #e50914;
+    box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
+}
+
+/* Styles pour les erreurs */
+.input-error {
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+.error-text {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+/* Menu déroulant pour les méthodes de paiement */
+.payment-method-select {
+    cursor: pointer;
+    background-color: #f9f9f9;
 }
 
 /* Bouton de soumission */
 .subscribe-btn {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 1rem;
-    background-color: red;
+    background-color: #e50914;
     color: white;
     border: none;
     border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .subscribe-btn:hover {
-    background-color: darkred;
+    background-color: #b2070e;
+}
+
+/* Ajustement conditionnel des champs */
+.card-details {
+    display: none;
+}
+
+.card-details.active {
+    display: block;
 }

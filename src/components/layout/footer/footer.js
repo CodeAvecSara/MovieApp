@@ -28,27 +28,27 @@ const Footer = () => {
           <h3 style={styles.title}>Quick Link</h3>
           <ul style={styles.links}>
             <li>
-              <a href="#" style={styles.link}>
+              <a href="/" style={styles.link}>
                 Home
               </a>
             </li>
             <li>
-              <a href="#" style={styles.link}>
-                Movie
+              <a href="movies" style={styles.link}>
+                Movies
               </a>
             </li>
             <li>
-              <a href="#" style={styles.link}>
+              <a href="series" style={styles.link}>
                 Series
               </a>
             </li>
             <li>
-              <a href="#" style={styles.link}>
+              <a href="about" style={styles.link}>
                 About
               </a>
             </li>
             <li>
-              <a href="#" style={styles.link}>
+              <a href="contact" style={styles.link}>
                 Contact
               </a>
             </li>
